@@ -1,6 +1,7 @@
 import type { Announcement } from './types';
 import { bytesToHex } from './utils';
 import { getDeployment } from './deployments';
+import { Address, xdr } from '@stellar/stellar-sdk';
 
 /**
  * Fetches all stealth address announcements from the Soroban RPC
@@ -93,8 +94,6 @@ export async function fetchAnnouncements(
 
 function parseAnnouncementEvent(event: Record<string, unknown>): Announcement | null {
   try {
-    const { xdr, Address } = require('@stellar/stellar-sdk');
-
     const topics = event.topic as string[];
     if (!topics || topics.length < 3) return null;
 

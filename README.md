@@ -22,6 +22,8 @@ pnpm add @wraith-protocol/sdk
 | `@wraith-protocol/sdk/chains/solana`  | Solana stealth address crypto (ed25519)              |
 | `@wraith-protocol/sdk/chains/ckb`     | CKB (Nervos) stealth address crypto (secp256k1)      |
 
+> React Native support is documented in `docs/guides/react-native-setup.mdx` and the companion example at `examples/react-native-stellar`.
+
 ## Agent Client
 
 The root export provides `Wraith` and `WraithAgent` — a lightweight HTTP client for the Wraith managed TEE platform.
